@@ -6,7 +6,7 @@ A hub-spoke network built end-to-end in Azure: segmented clinic sites, least-pri
 
 Meridian Health Staffing is expanding from a single Azure tenant into a multi-site clinical network. Two clinic locations need access to centralized shared services — but they should never be able to reach each other directly. A third site, still physically on-premises, needs to connect into the Azure environment the way a real branch office would: over the internet, through a VPN tunnel, not through a privileged shortcut.
 
-This lab builds that network, tests it with real traffic, and documents every design decision the way I'd want it documented if I handed this environment to another engineer tomorrow.
+This lab builds that network, tests it with real traffic, and documents every design decision.
 
 ## Architecture
 
