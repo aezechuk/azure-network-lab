@@ -18,7 +18,7 @@ Full address spacing, subnet breakdown, and the reasoning behind every NSG and r
 
 ## What's actually proven, not just configured
 
-Three things in this build are easy to claim and hard to actually demonstrate. All three are backed by real evidence in [`docs/screenshots-index.md`](./docs/screenshots/screenshots-index.md):
+Three things in this build are easy to claim and hard to actually demonstrate. All three are backed by real evidence in [`docs/screenshots/screenshots-index.md`](./docs/screenshots/screenshots-index.md):
 
 - **Clinic isolation holds.** Clinic A reaches the hub. Clinic A cannot reach Clinic B — not because a firewall blocked it, but because no path exists, reinforced by an explicit NSG deny as a second layer.
 - **The routing pattern is honest about its own limits.** A UDR documents what traffic flow *would* look like with a centralized inspection point in the hub. It's confirmed live and active — and explicitly does not carry real traffic, because no firewall or NVA sits at its next hop. That distinction is documented in [`docs/routing-decision-memo.md`](./docs/routing-decision-memo.md).
