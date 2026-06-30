@@ -10,8 +10,6 @@ This lab builds that network, tests it with real traffic, and documents every de
 
 ## Architecture
 
-![Architecture diagram](./docs/architecture.md)
-
 A hub VNet holds shared services, an administrative subnet, and the VPN gateway endpoint. Two clinic VNets are peered to the hub — never to each other. A fourth VNet simulates the on-premises clinic site and connects to the hub exclusively through a VPN Gateway-to-Gateway tunnel.
 
 Full address spacing, subnet breakdown, and the reasoning behind every NSG and routing decision live in [`docs/architecture.md`](./docs/architecture.md).
