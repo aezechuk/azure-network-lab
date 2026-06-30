@@ -1,6 +1,6 @@
 # Azure Network Lab — Meridian Health Staffing
 
-A hub-spoke network built end-to-end in Azure: segmented clinic sites, least-privilege NSGs, a documented (and intentionally non-functional) routing pattern for future traffic inspection, and hybrid connectivity proven two ways — site-to-site and point-to-site VPN. Built as hands-on AZ-104 preparation and as a portfolio piece for Cloud/SaaS Administrator and GRC-adjacent roles.
+A hub-spoke network built end-to-end in Azure: segmented clinic sites, least-privilege NSGs, a documented (and intentionally non-functional) routing pattern for future traffic inspection, and hybrid connectivity proven two ways — site-to-site and point-to-site VPN.
 
 ## Business case
 
