@@ -14,14 +14,7 @@ A hub VNet holds shared services, an administrative subnet, and the VPN gateway 
 
 Full address spacing, subnet breakdown, and the reasoning behind every NSG and routing decision live in [`docs/architecture.md`](./docs/architecture.md).
 
-## What's actually proven, not just configured
-
-Three things in this build are easy to claim and hard to actually demonstrate. All three are backed by real evidence in [`docs/screenshots/screenshots-index.md`](./docs/screenshots/screenshots-index.md):
-
-- **Clinic isolation holds.** Clinic A reaches the hub. Clinic A cannot reach Clinic B — not because a firewall blocked it, but because no path exists, reinforced by an explicit NSG deny as a second layer.
-- **The routing pattern is honest about its own limits.** A UDR documents what traffic flow *would* look like with a centralized inspection point in the hub. It's confirmed live and active — and explicitly does not carry real traffic, because no firewall or NVA sits at its next hop. That distinction is documented in [`docs/routing-decision-memo.md`](./docs/routing-decision-memo.md).
-- **Hybrid connectivity works, both directions.** A site-to-site tunnel carried real ping traffic between the simulated on-prem site and the hub. A point-to-site connection let an actual laptop, authenticated by certificate, reach into the hub network from outside Azure entirely.
-
+Clinic A reaches the hub, but cannot reach Clinic B — no path exists, reinforced by an explicit NSG deny as a second layer. The UDR pointing toward a future inspection point is confirmed live and active, and explicitly does not carry real traffic, since no firewall or NVA sits at its next hop yet. The VPN tunnel carried real ping traffic in both directions — site-to-site between the simulated on-prem site and the hub, and point-to-site from an actual laptop authenticated by certificate. Evidence for each is in [`docs/screenshots-index.md`](./docs/screenshots-index.md).
 ## How to build this
 
 1. **Foundation** — resource group, four VNets, subnets, peering. No peering between the two clinic VNets, ever. → [`scripts/phase1-foundation.ps1`](./scripts/phase1-foundation.ps1)
