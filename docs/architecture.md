@@ -1,6 +1,6 @@
 # Architecture — Meridian Health Staffing Network Lab
 
-![Meridian Network Lab Architecture](./architecture.png)
+<img width="1280" height="816" alt="architecture" src="https://github.com/user-attachments/assets/7d8b0371-f1cf-43dd-b814-b78311871a27" />
 
 ## Overview
 
@@ -35,8 +35,6 @@ Because VPN Gateways bill continuously while deployed, both the gateways and the
 No Azure Firewall, no NVA, and no functioning spoke-to-spoke path. Each of these was evaluated and explicitly deferred, not missed, for reasons documented in `routing-decision-memo.md`. The lab prioritizes demonstrating NSG- and UDR-based segmentation, the core AZ-104 networking competencies, over deploying production-grade traffic inspection that the lab's scope didn't require.
 
 ---
-
-<img width="1280" height="816" alt="architecture" src="https://github.com/user-attachments/assets/7d8b0371-f1cf-43dd-b814-b78311871a27" />
 
 *Meridian Health Staffing Network Lab · AZ-104 Portfolio Project*
 
